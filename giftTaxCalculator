@@ -1,0 +1,58 @@
+
+import java.util.Scanner;
+
+public class GiftTax {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        
+        
+        System.out.println("Value of the gift?");
+        
+        double gift = Double.valueOf(scan.nextLine());
+        
+        if (gift >= 1000000) {
+            if (gift == 1000000) {
+                double highestFloor = 142100;
+                System.out.println("Tax: " + highestFloor);
+            } else {
+                double highest = 142100 + (gift - 1000000) * 0.17;
+                System.out.println("Tax: " + highest);
+            }
+        } else if (gift >= 200000) {
+            if (gift == 200000) {
+                double higherFloor = 22100;
+                System.out.println("Tax: " + higherFloor);
+            } else {
+                double higher = 22100 + (gift - 200000) * 0.15;
+                System.out.println("Tax: " + higher);
+            }
+        } else if (gift >= 55000) {
+            if (gift == 55000) {
+                double wellFloor = 4700;
+                System.out.println("Tax: " + wellFloor);
+            } else {
+                double well = 4700 + (gift - 55000) * 0.12;
+                System.out.println("Tax: " + well);
+            }
+        } else if (gift >= 25000) {
+            if (gift == 25000) {
+                double averageFloor = 1700;
+                System.out.println("Tax: " + averageFloor);
+            } else {
+                double average = 1700 + (gift - 25000) * 0.1;
+                System.out.println("Tax: " + average);
+            }
+        } else if (gift >= 5000) {
+            if (gift == 5000) {
+                double lowFloor = 100;
+                System.out.println("Tax: " + lowFloor);
+            } else {
+                double low = 100 + (gift - 5000) * 0.08;
+                System.out.println("Tax: " + low);
+            }
+        } else {
+            System.out.println("No Tax!");
+        }
+    }
+}
